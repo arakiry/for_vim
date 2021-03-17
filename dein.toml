@@ -1,0 +1,69 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]] 
+repo = 'jistr/vim-nerdtree-tabs'
+
+[[plugins]] 
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]] 
+repo = 'itchyny/lightline.vim'
+
+[[plugins]] 
+repo = 'airblade/vim-giatgutter'
+
+[[plugins]] 
+repo = 'tpope/vim-fugitive'
+
+[[plugins]] 
+repo = 'jacquesbh/vim-showmarks'
+
+[[plugins]] 
+repo = 'junegunn/fzf.vim'
+
+[[plugins]] 
+repo = 'ervandew/supertab'
+
+[[plugins]] 
+repo = 'sheerun/vim-polyglot'
+
+[[plugins]] 
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]] 
+repo = 'tpope/vim-surround'
+
+[[plugins]] 
+repo = 'tpope.vim-repeat'
+
+[[plugins]] 
+repo = 'terryma/vim-expand-region'
+
+[[plugins]] 
+repo = 'easymotion/vim-easymotion'
+
+[[plugins]] 
+repo = 'simeji/winresizer'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'yuttie/comfortable-motion.vim'
+
+[[plugins]]
+repo = 'tyru/oppen-browser.vim'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
