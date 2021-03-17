@@ -1,5 +1,6 @@
 " ファイルのロード
 runtime! set.vim
+runtime! map.vim
 
 
 " 日本語の設定

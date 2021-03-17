@@ -4,7 +4,7 @@
 set fileencodings=UTF-8
 
 " 改行コードの解釈
-set fileformats=dos,unix,mac
+set fileformats=unix,dos,mac
 
 " バックアップファイルを作らない
 set nobackup
