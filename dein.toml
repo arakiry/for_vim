@@ -1,52 +1,95 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+# [[plugins]]
+# repo = 'junegunn/fzf.vim'
+# on_cmd = [
+#     'Files',
+#     'ProjectFiles',
+#     'Buffers',
+#     'BLines',
+#     'History',
+#     'Tags',
+#     'BTags',
+#     'GFiles',
+#     'Ag',
+# ]
+# hook_add = '''
+# nnoremap <silent> ,a :<C-u>Ag<CR>
+# nnoremap <silent> ,f :<C-u>ProjectFiles<CR>
+# nnoremap <silent> ,b :<C-u>Buffers<CR>
+# nnoremap <silent> ,m :<C-u>History<CR>
+# " set rtp+=/usr/bin/fzf
+# " set rtp+=$XDG_CACHE_HOME/fzf "$XDG_CACHE_HOMEの下にインストールした場合
+# " set rtp+=~/.fzf "~/.fzfにインストールした場合
+# '''
+
 [[plugins]]
-repo = 'scrooloose/nerdtree'
+repo = 'lambdalisue/fern.vim'
 
-[[plugins]] 
-repo = 'jistr/vim-nerdtree-tabs'
+# [[plugins]]
+# repo = 'LumaKernel/fern-mapping-reload-all.vim'
+# depends = ['fern.vim']
 
-[[plugins]] 
-repo = 'Xuyuanp/nerdtree-git-plugin'
+# [[plugins]]
+# repo = 'LumaKernel/fern-mapping-fzf.vim'
+# depends = ['fzf', 'fern.vim']
 
-[[plugins]] 
+# [[plugins]]
+# repo = 'yuki-yano/fern-preview.vim'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'previm/previm'
+hook_add = '''
+    autocmd BufRead,BufNewFile *.md  set filetype=markdown
+    nnoremap <silent> <C-p> :PrevimOpen<CR>
+    let g:vim_markdown_folding_disabled=1
+    let g:previm_enable_realtime=1
+'''
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 
-[[plugins]] 
-repo = 'airblade/vim-giatgutter'
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
 
-[[plugins]] 
+[[plugins]]
 repo = 'tpope/vim-fugitive'
 
-[[plugins]] 
-repo = 'jacquesbh/vim-showmarks'
-
-[[plugins]] 
-repo = 'junegunn/fzf.vim'
-
-[[plugins]] 
+[[plugins]]
 repo = 'ervandew/supertab'
 
-[[plugins]] 
+[[plugins]]
 repo = 'sheerun/vim-polyglot'
 
-[[plugins]] 
+[[plugins]]
 repo = 'jiangmiao/auto-pairs'
 
-[[plugins]] 
+[[plugins]]
 repo = 'tpope/vim-surround'
 
-[[plugins]] 
-repo = 'tpope.vim-repeat'
+[[plugins]]
+repo = 'tpope/vim-repeat'
 
-[[plugins]] 
+[[plugins]]
 repo = 'terryma/vim-expand-region'
 
-[[plugins]] 
+[[plugins]]
 repo = 'easymotion/vim-easymotion'
 
-[[plugins]] 
+[[plugins]]
 repo = 'simeji/winresizer'
 
 [[plugins]]
@@ -54,12 +97,6 @@ repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
 repo = 'yuttie/comfortable-motion.vim'
-
-[[plugins]]
-repo = 'tyru/oppen-browser.vim'
-
-[[plugins]]
-repo = 'Shougo/unite.vim'
 
 [[plugins]]
 repo = 'tomasr/molokai'

@@ -9,16 +9,19 @@ nnoremap H 0
 nnoremap L $
 
 " ウィンドウのスプリット
-nnoremap <C-j> <C-w><C-j>
-nnoremap <C-k> <C-w><C-k>
-nnoremap <C-l> <C-w><C-l>
-nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
 
 " 削除をペーストしない
 nnoremap d "_d
 xnoremap d "_d
 xnoremap p "_dP
 
+" タブの移動
+nnoremap <Tab>l :+tabmove<Enter>
+nnoremap <Tab>h :-tabmove<Enter>
 
 " Visual
 
