@@ -103,3 +103,6 @@ set ruler
 
 " コマンドラインでの補完が拡張モードで行われる
 set wildmenu
+
+" 日本語の表示幅
+" set ambiwidth=single
