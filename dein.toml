@@ -1,28 +1,36 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# [[plugins]]
-# repo = 'junegunn/fzf.vim'
-# on_cmd = [
-#     'Files',
-#     'ProjectFiles',
-#     'Buffers',
-#     'BLines',
-#     'History',
-#     'Tags',
-#     'BTags',
-#     'GFiles',
-#     'Ag',
-# ]
-# hook_add = '''
-# nnoremap <silent> ,a :<C-u>Ag<CR>
-# nnoremap <silent> ,f :<C-u>ProjectFiles<CR>
-# nnoremap <silent> ,b :<C-u>Buffers<CR>
-# nnoremap <silent> ,m :<C-u>History<CR>
-# " set rtp+=/usr/bin/fzf
-# " set rtp+=$XDG_CACHE_HOME/fzf "$XDG_CACHE_HOMEの下にインストールした場合
-# " set rtp+=~/.fzf "~/.fzfにインストールした場合
-# '''
+[[plugins]]
+repo = 'junegunn/fzf'
+build_on = '''
+./install -all
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+on_cmd = [
+    'Files',
+    'ProjectFiles',
+    'Buffers',
+    'BLines',
+    'History',
+    'Tags',
+    'BTags',
+    'GFiles',
+    'Ag',
+    'Rg',
+]
+hook_add = '''
+nnoremap <silent> ,a :<C-u>Ag<CR>
+nnoremap <silent> ,r :<C-u>Rg<CR>
+nnoremap <silent> ,f :<C-u>Files<CR>
+nnoremap <silent> ,b :<C-u>Buffers<CR>
+nnoremap <silent> ,m :<C-u>History<CR>
+" set rtp+=/usr/local/bin/fzf
+" set rtp+=$XDG_CACHE_HOME/fzf "$XDG_CACHE_HOMEの下にインストールした場合
+" set rtp+=~/.fzf "~/.fzfにインストールした場合
+'''
 
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
@@ -39,7 +47,7 @@ repo = 'lambdalisue/fern.vim'
 # repo = 'yuki-yano/fern-preview.vim'
 
 [[plugins]]
-repo = 'neoclide/coc.nvim'
+repo = 'github/copilot.vim'
 
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
