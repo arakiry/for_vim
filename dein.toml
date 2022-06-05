@@ -35,16 +35,8 @@ nnoremap <silent> <Leader>m :<C-u>History<CR>
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 
-# [[plugins]]
-# repo = 'LumaKernel/fern-mapping-reload-all.vim'
-# depends = ['fern.vim']
-
-# [[plugins]]
-# repo = 'LumaKernel/fern-mapping-fzf.vim'
-# depends = ['fzf', 'fern.vim']
-
-# [[plugins]]
-# repo = 'yuki-yano/fern-preview.vim'
+[[plugins]]
+repo = 'yuki-yano/fern-preview.vim'
 
 [[plugins]]
 repo = 'github/copilot.vim'
