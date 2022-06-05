@@ -1,13 +1,17 @@
 [[plugins]]
+# dein用
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+# fzf用
 repo = 'junegunn/fzf'
 build_on = '''
 ./install -all
 '''
 
 [[plugins]]
+# ファジー検索(ファイルや単語検索)
+repo = 'junegunn/fzf'
 repo = 'junegunn/fzf.vim'
 on_cmd = [
     'Files',
@@ -34,16 +38,16 @@ nnoremap <silent> <Leader>h :<C-u>History<CR>
 '''
 
 [[plugins]]
+# ファイラー
 repo = 'lambdalisue/fern.vim'
 
 [[plugins]]
+# ファイラーのプレビュー
 repo = 'yuki-yano/fern-preview.vim'
 
 [[plugins]]
+# AI補完
 repo = 'github/copilot.vim'
-
-[[plugins]]
-repo = 'plasticboy/vim-markdown'
 
 [[plugins]]
 repo = 'previm/previm'
@@ -55,53 +59,70 @@ hook_add = '''
 '''
 
 [[plugins]]
+# URLをブラウザーで開く
+# 追加の設定が必要(ショートカットコマンド)
 repo = 'tyru/open-browser.vim'
 
 [[plugins]]
-repo = 'w0rp/ale'
+# Linter
+# 追加の設定が必要(Lintのタイミングなど)
+repo = 'dense-analysis/ale'
 
 [[plugins]]
+# ステータスラインを綺麗に
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
+# gitの差分を行数で表示
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
+# gitのコマンド
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
+# なんか色々Tab補完
 repo = 'ervandew/supertab'
 
 [[plugins]]
+# Syntax Highlight
 repo = 'sheerun/vim-polyglot'
 
 [[plugins]]
+# 括弧を対にしてくれる
+# いらなかったら消そう
 repo = 'jiangmiao/auto-pairs'
 
-[[plugins]]
-repo = 'tpope/vim-surround'
+# [[plugins]]
+# # 囲みだけを削除できる
+# # 追加の設定が必要(ショートカット)
+# # あんまり使わなさそうだから、コメントアウト
+# repo = 'tpope/vim-surround'
 
 [[plugins]]
-repo = 'tpope/vim-repeat'
-
-[[plugins]]
-repo = 'terryma/vim-expand-region'
-
-[[plugins]]
+# カーソル移動を楽に
+# 追加の設定が必要(ショートカット)
+# 一番練習したい
 repo = 'easymotion/vim-easymotion'
 
 [[plugins]]
+# ウィンドウのサイズを変更
 repo = 'simeji/winresizer'
 
 [[plugins]]
+# 末尾のスペースの可視化と削除
 repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
+# <C-d>と<C-u>がスムーズになる
 repo = 'yuttie/comfortable-motion.vim'
 
 [[plugins]]
+# カラーテーマ
 repo = 'tomasr/molokai'
 
 [[plugins]]
+# インデントを可視化
+# 追加の設定が必要
 repo = 'nathanaelkane/vim-indent-guides'
 
