@@ -63,4 +63,4 @@ nnoremap <Leader>gp :Git push
 nnoremap <silent> <Leader>diff :Gvdiffsplit<CR>
 
 " Fern
-nnoremap <silent> <C-s> :Fern . -drawer -toggle<CR>
+nnoremap <silent> <C-s> :Fern . -reveal=% -drawer -toggle<CR>
