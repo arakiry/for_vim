@@ -1,3 +1,6 @@
+" leaderの設定
+let mapleader = " "
+
 " ファイルのロード
 runtime! set.vim
 runtime! map.vim

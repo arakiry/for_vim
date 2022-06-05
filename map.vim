@@ -56,11 +56,11 @@ cnoremap json %ijq .<CR>
 " Plugin
 
 " fugitive
-nnoremap <silent> gs :Gstatus<CR>
-nnoremap <silent> ga :Gadd
-cnoremap gcm Gcommit -m ''<Left>
-nnoremap gp :Gpush
-nnoremap <silent> diff :Gvdiffsplit<CR>
+nnoremap <silent> <Leader>gs :Git status<CR>
+nnoremap <silent> <Leader>ga :Git add
+nnoremap <Leader>gc :Git commit -m ''<Left>
+nnoremap <Leader>gp :Git push
+nnoremap <silent> <Leader>diff :Gvdiffsplit<CR>
 
 " Fern
 nnoremap <silent> <C-s> :Fern . -drawer -toggle<CR>
