@@ -22,11 +22,12 @@ on_cmd = [
     'Rg',
 ]
 hook_add = '''
-nnoremap <silent> <Leader>a :<C-u>Ag<CR>
+" ripgrepより遅いため、使わない
+" nnoremap <silent> <Leader>a :<C-u>Ag<CR>
 nnoremap <silent> <Leader>r :<C-u>Rg<CR>
 nnoremap <silent> <Leader>f :<C-u>Files<CR>
 nnoremap <silent> <Leader>b :<C-u>Buffers<CR>
-nnoremap <silent> <Leader>m :<C-u>History<CR>
+nnoremap <silent> <Leader>h :<C-u>History<CR>
 " set rtp+=/usr/local/bin/fzf
 " set rtp+=$XDG_CACHE_HOME/fzf "$XDG_CACHE_HOMEの下にインストールした場合
 " set rtp+=~/.fzf "~/.fzfにインストールした場合
