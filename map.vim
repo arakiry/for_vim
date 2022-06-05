@@ -63,4 +63,4 @@ nnoremap gp :Gpush
 nnoremap <silent> diff :Gvdiffsplit<CR>
 
 " Fern
-nnoremap <C-s> :Fern . -drawer -toggle<CR>
+nnoremap <silent> <C-s> :Fern . -drawer -toggle<CR>
