@@ -62,3 +62,5 @@ cnoremap gcm Gcommit -m ''<Left>
 nnoremap gp :Gpush
 nnoremap <silent> diff :Gvdiffsplit<CR>
 
+" Fern
+nnoremap <C-s> :Fern . -drawer -toggle<CR>
