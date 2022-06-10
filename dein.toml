@@ -46,31 +46,28 @@ repo = 'lambdalisue/fern.vim'
 repo = 'yuki-yano/fern-preview.vim'
 
 [[plugins]]
+# gitのstatusをファイラーに表示
+repo = 'lambdalisue/fern-git-status.vim'
+
+[[plugins]]
+# nerdfont
+repo = 'lambdalisue/nerdfont.vim'
+
+[[plugins]]
+# ファイラーにアイコンをつける
+repo = 'lambdalisue/fern-renderer-nerdfont.vim'
+
+[[plugins]]
+# ファイラーのアイコンに色をつける
+repo = 'lambdalisue/glyph-palette.vim'
+
+[[plugins]]
+# ファイラーにアイコンをつける
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
 # AI補完
 repo = 'github/copilot.vim'
-
-[[plugins]]
-repo = 'previm/previm'
-hook_add = '''
-    autocmd BufRead,BufNewFile *.md  set filetype=markdown
-    nnoremap <silent> <C-p> :PrevimOpen<CR>
-    let g:vim_markdown_folding_disabled=1
-    let g:previm_enable_realtime=1
-'''
-
-[[plugins]]
-# URLをブラウザーで開く
-# 追加の設定が必要(ショートカットコマンド)
-repo = 'tyru/open-browser.vim'
-
-[[plugins]]
-# Linter
-# 追加の設定が必要(Lintのタイミングなど)
-repo = 'dense-analysis/ale'
-
-[[plugins]]
-# ステータスラインを綺麗に
-repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 # gitの差分を行数で表示
@@ -79,6 +76,44 @@ repo = 'airblade/vim-gitgutter'
 [[plugins]]
 # gitのコマンド
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+# カーソル移動を楽に
+repo = 'phaazon/hop.nvim'
+hook_add = '''
+lua require'hop'.setup()
+lua vim.api.nvim_set_keymap('n', 'f', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", {})
+lua vim.api.nvim_set_keymap('v', 'f', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", {})
+lua vim.api.nvim_set_keymap('o', 'f', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END, inclusive_jump = true })<cr>", {})
+'''
+
+[[plugins]]
+# コメントアウト用
+repo = 'tpope/vim-commentary'
+
+# [[plugins]]
+# # LSP用
+# # 追加の設定が必要
+# repo = 'neoclide/coc.nvim'
+
+[[plugins]]
+# ステータスラインを綺麗に
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+# ウィンドウのサイズを変更
+repo = 'simeji/winresizer'
+
+[[plugins]]
+# 簡単に選択範囲を拡大
+repo = 'tpope/vim-expand-region'
+
+
+
+[[plugins]]
+# URLをブラウザーで開く
+# 追加の設定が必要(ショートカットコマンド)
+repo = 'tyru/open-browser.vim'
 
 [[plugins]]
 # なんか色々Tab補完
@@ -100,16 +135,6 @@ repo = 'jiangmiao/auto-pairs'
 # repo = 'tpope/vim-surround'
 
 [[plugins]]
-# カーソル移動を楽に
-# 追加の設定が必要(ショートカット)
-# 一番練習したい
-repo = 'easymotion/vim-easymotion'
-
-[[plugins]]
-# ウィンドウのサイズを変更
-repo = 'simeji/winresizer'
-
-[[plugins]]
 # 末尾のスペースの可視化と削除
 repo = 'bronson/vim-trailing-whitespace'
 
@@ -123,6 +148,9 @@ repo = 'tomasr/molokai'
 
 [[plugins]]
 # インデントを可視化
-# 追加の設定が必要
-repo = 'nathanaelkane/vim-indent-guides'
+repo = 'Yggdroot/indentLine'
 
+[[plugins]]
+# コードを整理してくれる
+# 追加の設定が必要(ショートカット)
+repo = 'junegunn/vim-easy-align'

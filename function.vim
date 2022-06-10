@@ -1,13 +1,3 @@
-" Fern reload
-"function s:init_fern_mapping_reload_all()
-"    nmap <buffer> R <Plug>(fern-action-reload:all)
-"endfunction
-"augroup my-fern-mapping-reload-all
-"    autocmd! *
-"    autocmd FileType fern call s:init_fern_mapping_reload_all()
-"augroup END
-
-
 " Fern preview
 function! s:fern_settings() abort
   nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
@@ -19,4 +9,15 @@ endfunction
 augroup fern-settings
   autocmd!
   autocmd FileType fern call s:fern_settings()
+augroup END
+
+" Fern font
+let g:fern#renderer = 'nerdfont'
+let g:fern#default_hidden=1
+
+" Fern glyph-palette
+augroup my-glyph-palette
+  autocmd! *
+  autocmd FileType fern call glyph_palette#apply()
+  autocmd FileType nerdtree,startify call glyph_palette#apply()
 augroup END
