@@ -9,10 +9,10 @@ nnoremap H 0
 nnoremap L $
 
 " ウィンドウのスプリット
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
+" nnoremap <C-h> <C-w>h
 
 " 削除をペーストしない
 nnoremap d "_d
@@ -22,6 +22,9 @@ xnoremap p "_dP
 " タブの移動
 nnoremap <Tab>l :+tabmove<Enter>
 nnoremap <Tab>h :-tabmove<Enter>
+
+" ハイライトの削除
+nnoremap <silent> <Esc> :noh<CR>
 
 " Visual
 
@@ -64,3 +67,7 @@ nnoremap <silent> <Leader>diff :Gvdiffsplit<CR>
 
 " Fern
 nnoremap <silent> <C-s> :Fern . -reveal=% -drawer -toggle<CR>
+
+" copilot
+inoremap <C-n> <Plug>(copilot-next)
+inoremap <C-p> <Plug>(copilot-previous)
