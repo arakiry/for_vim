@@ -41,11 +41,6 @@ inoremap <C-k> <up>
 " inoremap <C-l> <Right>
 " inoremap <C-h> <Left>
 
-" タグの補完
-inoremap {<Enter> {}<Left><CR><ESC>O
-inoremap [<Enter> []<Left><CR><ESC>O
-inoremap (<Enter> ()<Left><CR><ESC>O
-
 
 " Command
 
