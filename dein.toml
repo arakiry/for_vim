@@ -25,17 +25,6 @@ on_cmd = [
     'Ag',
     'Rg',
 ]
-hook_add = '''
-" ripgrepより遅いため、使わない
-" nnoremap <silent> <Leader>a :<C-u>Ag<CR>
-nnoremap <silent> <Leader>r :<C-u>Rg<CR>
-nnoremap <silent> <Leader>f :<C-u>Files<CR>
-nnoremap <silent> <Leader>b :<C-u>Buffers<CR>
-nnoremap <silent> <Leader>h :<C-u>History<CR>
-" set rtp+=/usr/local/bin/fzf
-" set rtp+=$XDG_CACHE_HOME/fzf "$XDG_CACHE_HOMEの下にインストールした場合
-" set rtp+=~/.fzf "~/.fzfにインストールした場合
-'''
 
 [[plugins]]
 # ファイラー
@@ -91,10 +80,21 @@ lua vim.api.nvim_set_keymap('o', 'f', "<cmd> lua require'hop'.hint_words({ hint_
 # コメントアウト用
 repo = 'tpope/vim-commentary'
 
-# [[plugins]]
-# # LSP用
-# # 追加の設定が必要
-# repo = 'neoclide/coc.nvim'
+[[plugins]]
+# LSP用
+# 追加の設定が必要
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+merged = '0'
+hook_add = '''
+nnoremap <silent> g[ <Plug>(coc-diagnostic-prev)
+nnoremap <silent> g] <Plug>(coc-diagnostic-next)
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gD <Plug>(coc-definition-preview)
+nnoremap <silent> gr <Plug>(coc-references)
+# nnoremap <silent> gy <Plug>(coc-type-definition)
+# nnoremap <silent> gi <Plug>(coc-implementation)
+'''
 
 [[plugins]]
 # ステータスラインを綺麗に
@@ -115,9 +115,10 @@ repo = 'tpope/vim-expand-region'
 # 追加の設定が必要(ショートカットコマンド)
 repo = 'tyru/open-browser.vim'
 
-[[plugins]]
-# なんか色々Tab補完
-repo = 'ervandew/supertab'
+# [[plugins]]
+# # なんか色々Tab補完
+# # Copilotと被るので無効
+# repo = 'ervandew/supertab'
 
 [[plugins]]
 # Syntax Highlight
