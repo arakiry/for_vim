@@ -58,6 +58,15 @@ cnoremap json %ijq .<CR>
 
 " Plugin
 
+" fzf
+" ripgrepより遅いため、使わない
+" nnoremap <silent> <Leader>a :<C-u>Ag<CR>
+nnoremap <silent> <Leader>r :<C-u>Rg<CR>
+nnoremap <silent> <Leader>f :<C-u>Files<CR>
+nnoremap <silent> <Leader>b :<C-u>Buffers<CR>
+nnoremap <silent> <Leader>h :<C-u>History<CR>
+
+
 " fugitive
 nnoremap <silent> <Leader>gs :Git status<CR>
 nnoremap <silent> <Leader>ga :Git add
