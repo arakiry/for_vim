@@ -35,3 +35,6 @@ let g:lightline = {
       \ }
 " Use autocmd to force lightline update.
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
+
+" indentLine
+let g:indentLine_conceallevel = 0
