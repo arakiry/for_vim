@@ -90,14 +90,20 @@ hook_add = '''
 nnoremap <silent> g[ <Plug>(coc-diagnostic-prev)
 nnoremap <silent> g] <Plug>(coc-diagnostic-next)
 nnoremap <silent> gd <Plug>(coc-definition)
-nnoremap <silent> gD <Plug>(coc-definition-preview)
 nnoremap <silent> gr <Plug>(coc-references)
 nnoremap rn <Plug>(coc-rename)
 nnoremap qf <Plug>(coc-fix-current)
 nnoremap <silent><nowait> <Leader>a :<C-u>CocList diagnostics<cr>
 nnoremap <silent><nowait> <Leader>o :<C-u>CocList outline<cr>
-# nnoremap <silent> gy <Plug>(coc-type-definition)
-# nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
 '''
 
 [[plugins]]
