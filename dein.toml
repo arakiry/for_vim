@@ -71,9 +71,13 @@ repo = 'tpope/vim-fugitive'
 repo = 'phaazon/hop.nvim'
 hook_add = '''
 lua require'hop'.setup()
-lua vim.api.nvim_set_keymap('n', 'f', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", {})
-lua vim.api.nvim_set_keymap('v', 'f', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", {})
-lua vim.api.nvim_set_keymap('o', 'f', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END, inclusive_jump = true })<cr>", {})
+lua vim.api.nvim_set_keymap('n', 'f', "<cmd> lua require'hop'.hint_char1({ hint_position = require'hop.hint'.HintPosition.END })<cr>", {})
+lua vim.api.nvim_set_keymap('v', 'f', "<cmd> lua require'hop'.hint_char1({ hint_position = require'hop.hint'.HintPosition.END })<cr>", {})
+lua vim.api.nvim_set_keymap('o', 'f', "<cmd> lua require'hop'.hint_char1({ hint_position = require'hop.hint'.HintPosition.END, inclusive_jump = true })<cr>", {})
+# wordで飛ぶよりも、char1で飛ぶ方が楽そうなのでコメントアウト
+# lua vim.api.nvim_set_keymap('n', 'f', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", {})
+# lua vim.api.nvim_set_keymap('v', 'f', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END })<cr>", {})
+# lua vim.api.nvim_set_keymap('o', 'f', "<cmd> lua require'hop'.hint_words({ hint_position = require'hop.hint'.HintPosition.END, inclusive_jump = true })<cr>", {})
 '''
 
 [[plugins]]
