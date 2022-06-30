@@ -72,6 +72,38 @@ nnoremap <silent> <Leader>diff :Gvdiffsplit<CR>
 " Fern
 nnoremap <silent> <C-s> :Fern . -reveal=% -drawer -toggle<CR>
 
+" Fern preview
+function! s:fern_settings() abort
+  nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
+  nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)
+  nmap <silent> <buffer> <C-d> <Plug>(fern-action-preview:scroll:down:half)
+  nmap <silent> <buffer> <C-u> <Plug>(fern-action-preview:scroll:up:half)
+endfunction
+
+augroup fern-settings
+  autocmd!
+  autocmd FileType fern call s:fern_settings()
+augroup END
+
 " copilot
 inoremap <C-n> <Plug>(copilot-next)
 inoremap <C-p> <Plug>(copilot-previous)
+
+" coc
+nnoremap <silent> g[ <Plug>(coc-diagnostic-prev)
+nnoremap <silent> g] <Plug>(coc-diagnostic-next)
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gr <Plug>(coc-references)
+nnoremap rn <Plug>(coc-rename)
+nnoremap qf <Plug>(coc-fix-current)
+nnoremap <silent><nowait> <Leader>a :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <Leader>o :<C-u>CocList outline<cr>
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
