@@ -1,4 +1,5 @@
 {
+  // for python
   "jedi.enable": true,
   "jedi.startupMessage": false,
   "jedi.markupKindPreferred": "plaintext",
@@ -29,5 +30,11 @@
     ".venv",
     "__pycache__",
     "venv"
-  ]
+  ],
+
+  // for javascript/typescript
+  "eslint.packageManager": "yarn",
+  "eslint.nodePath": ".yarn/sdks",
+  "workspace.workspaceFolderCheckCwd": false,
+  "tsserver.tsdk": ".yarn/sdks/typescript/lib"
 }
